@@ -12,5 +12,8 @@
   "private": false,
   "devDependencies": {
     "serverless-offline": "^3.16.0"
+  },
+  "dependencies": {
+    "ioredis": "^3.2.2"
   }
 }
