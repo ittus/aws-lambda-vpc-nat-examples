@@ -205,3 +205,4 @@ custom:
     apiMethod: "any"
   config:
     CACHE_INSTANCE_SIZE: cache.t2.micro
+  webpackIncludeModules:  true # enable auto-packing of external modules
