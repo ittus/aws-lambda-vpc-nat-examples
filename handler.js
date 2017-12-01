@@ -1,10 +1,15 @@
 'use strict';
 
-module.exports.hello = (event, context, callback) => {
+import RedisCache from './helper/RedisCache'
+
+module.exports.hello = async (event, context, callback) => {
+  const CACHE_KEY = 'CACHE_KEY'
+  await RedisCache.set(CACHE_KEY, {"message": "Hello World!"})
+  let checkCache = await RedisCache.get(CACHE_KEY)
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: 'Hello world!'
+      checkCache
     }),
   };
 
