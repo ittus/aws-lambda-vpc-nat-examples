@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Serverless example with elasticahe and internet access",
   "main": "handler.js",
-  "repository": "https://google.com",
+  "repository": "https://github.com/ittus/aws-lambda-vpc-nat-examples",
   "author": "Vu Minh Thang",
   "license": "MIT",
   "scripts": {
