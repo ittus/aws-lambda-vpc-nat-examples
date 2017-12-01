@@ -1,0 +1,16 @@
+{
+  "name": "serverless-elasticache-vpc-nat",
+  "version": "1.0.0",
+  "description": "Serverless example with elasticahe and internet access",
+  "main": "handler.js",
+  "repository": "https://google.com",
+  "author": "Vu Minh Thang",
+  "license": "MIT",
+  "scripts": {
+    "dev": "sls offline start"
+  },
+  "private": false,
+  "devDependencies": {
+    "serverless-offline": "^3.16.0"
+  }
+}
