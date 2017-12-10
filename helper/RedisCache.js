@@ -1,5 +1,4 @@
 import Redis from 'ioredis'
-
 const DEFAULT_TIMEOUT = 4000
 let cacheClient = null
 

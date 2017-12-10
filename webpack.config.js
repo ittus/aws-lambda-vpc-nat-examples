@@ -1,3 +1,4 @@
+/*eslint-disable */
 var webpack = require('webpack')
 var nodeExternals = require('webpack-node-externals')
 const slsw = require('serverless-webpack')
@@ -7,6 +8,12 @@ module.exports = {
   target: 'node',
   module: {
     loaders: [
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: "eslint-loader"
+      },
       {
         test: /\.js$/,
         loaders: ['babel-loader'],
