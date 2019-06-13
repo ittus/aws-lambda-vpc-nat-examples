@@ -149,7 +149,7 @@ plugins:
   - serverless-offline
 custom:
   api:
-    apiPath: "{proxy+}"
+    apiPath: "{proxy}"
     apiMethod: "any"
   config:
     CACHE_INSTANCE_SIZE: cache.t2.micro
