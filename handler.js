@@ -4,15 +4,15 @@ import RedisCache from './helper/RedisCache'
 
 module.exports.hello = async (event, context, callback) => {
   context.callbackWaitsForEmptyEventLoop = false
-
-  const CACHE_KEY = 'CACHE_KEY'
+  console.log('event event.pathParameters', event.pathParameters)
+  const CACHE_KEY = event.pathParameters.proxy
   let res = {}
   let checkCache = await RedisCache.get(CACHE_KEY)
   if (checkCache) {
     res = checkCache
   } else {
-    await RedisCache.set(CACHE_KEY, {'message': 'Hello World!'})
-    res = {'message': 'Set cache success!'}
+    await RedisCache.set(CACHE_KEY, {'message': 'Cache response for ' + CACHE_KEY})
+    res = {'message': 'Set cache success for ' + CACHE_KEY + '!'}
   }
   const response = {
     statusCode: 200,
