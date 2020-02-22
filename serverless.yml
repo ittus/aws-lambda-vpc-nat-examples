@@ -2,7 +2,7 @@ service: serverless-elasticache-vpc-nat
 
 provider:
   name: aws
-  runtime: nodejs6.10
+  runtime: nodejs8.10
   region: us-east-2
   stage: development
   profile: default
@@ -149,7 +149,7 @@ plugins:
   - serverless-offline
 custom:
   api:
-    apiPath: "{proxy+}"
+    apiPath: "{proxy}"
     apiMethod: "any"
   config:
     CACHE_INSTANCE_SIZE: cache.t2.micro
